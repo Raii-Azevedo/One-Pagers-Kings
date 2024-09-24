@@ -1,10 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+const navbar = document.querySelector('.navbar');
+const menuToggle = document.querySelector('.menu-toggle'); // Assumindo que você tenha um botão de menu
 
-    navbarToggler.addEventListener('click', function () {
-        navbarCollapse.classList.toggle('show');
-    });
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
 });
 
 

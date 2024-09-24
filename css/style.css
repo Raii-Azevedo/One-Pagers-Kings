@@ -142,22 +142,45 @@ img {
 
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-    top: 15%;
+  .text-box h1 {
+    font-size: 60px; /* Ajusta o tamanho do título para mobile */
   }
-  .hero-description {
-    font-size: 1rem;
-    top: 25%;
+  .text-box h3 {
+    font-size: 16px; /* Ajusta o tamanho do subtítulo para mobile */
   }
   .highway {
-    height: 150px;
+    height: 150px; /* Ajusta a altura da highway para mobile */
   }
   .city {
-    height: 200px;
+    height: 200px; /* Ajusta a altura da cidade para mobile */
   }
   img {
-    height: 30%;
+    height: 30%; /* Ajusta a altura da imagem para mobile */
+  }
+  ul {
+    flex-direction: column; /* Coloca os itens da navbar em coluna em mobile */
+    background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)); /* Cor de fundo para mobile */
+    position: absolute;
+    top: 5.5vh; /* Espaço do topo */
+    left: 0;
+    right: 0;
+    display: none; /* Inicialmente oculto */
+    z-index: 20; /* Acima de outros elementos */
+    width: 100vw; /* Ocupar 100% da largura da viewport */
+    max-width: 210%; /* Garantir que não exceda a largura */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+  .navbar-nav li {
+    text-align: center; /* Centraliza o texto dos itens da navbar */
+    margin: 10px 0; /* Margem entre os itens */
+  }
+  .navbar.active ul {
+    display: flex; /* Exibe a navbar ao ativar */
+  }
+  .navbar li {
+    margin: 10px 0; /* Margem entre itens da navbar em mobile */
   }
 }
 
