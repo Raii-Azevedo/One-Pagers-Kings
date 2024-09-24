@@ -10,6 +10,12 @@ body {
   overflow-y: hidden;
 }
 
+.rules-section,
+.evaluation-criteria-section,
+.awards-section {
+  display: none; /* Esconde todas as seções inicialmente */
+}
+
 .header {
   width: 100%;
   height: 5vh;
@@ -23,18 +29,24 @@ body {
   z-index: 10;
 }
 
-.logo img {
-  max-height: 100%;
-  width: auto;
+.logo {
+  flex: 0 0 auto; /* Não permite que a logo se expanda */
+}
+
+.logo-image {
+  max-height: 40%; /* Garante que a imagem não exceda a altura da navbar */
+  width: auto; /* Mantém a proporção da imagem */
 }
 
 .navbar {
   margin-left: auto;
+  position: relative; /* Para que a imagem se posicione em relação a este elemento */
 }
 
 ul {
   display: flex;
   list-style: none;
+  align-items: center; /* Alinha verticalmente os itens do menu */
 }
 
 ul li {
@@ -49,6 +61,17 @@ ul li a {
 
 ul li a:hover {
   color: rgb(128, 0, 128) !important;
+}
+
+/* Ajustes para a imagem do ícone de regras */
+.rules-icon {
+  position: absolute; /* Para posicionar em relação ao contêiner */
+  left: 10px; /* Alinha à esquerda com um pequeno espaço */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajusta para centralizar exatamente */
+  max-width: 40px; /* Ajusta o tamanho da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 20; /* Coloca acima de outros elementos */
 }
 
 .hero {
@@ -88,19 +111,19 @@ ul li a:hover {
 }
 
 .text-box a {
-  display: inline-block; /* Para aplicar margem corretamente */
-  margin: 20px auto; /* Margem superior e inferior */
-  padding: 10px 15px; /* Tamanho do botão */
-  border: 2px solid white; /* Borda branca */
-  background: transparent; /* Fundo transparente */
-  color: white; /* Cor do texto */
-  text-align: center; /* Centraliza o texto */
-  text-decoration: none; /* Remove sublinhado */
-  transition: background 0.3s ease; /* Transição suave para o hover */
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .text-box a:hover {
-  background: rgba(255, 255, 255, 0.2); /* Efeito de hover com leve transparência */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .highway {
@@ -143,44 +166,94 @@ img {
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   .text-box h1 {
-    font-size: 60px; /* Ajusta o tamanho do título para mobile */
+    font-size: 60px;
   }
   .text-box h3 {
-    font-size: 16px; /* Ajusta o tamanho do subtítulo para mobile */
+    font-size: 16px;
   }
   .highway {
-    height: 150px; /* Ajusta a altura da highway para mobile */
+    height: 150px;
+    width: 400%; /* Ajusta a largura para melhor visualização */
+  }
+  @keyframes highway {
+    100% {
+      transform: translateX(-200%); /* Ajusta a animação para melhor visualização */
+    }
   }
   .city {
-    height: 200px; /* Ajusta a altura da cidade para mobile */
+    height: 200px;
+    width: 400%; /* Ajusta a largura para melhor visualização */
+  }
+  @keyframes city {
+    100% {
+      transform: translateX(-200%); /* Ajusta a animação para melhor visualização */
+    }
   }
   img {
-    height: 30%; /* Ajusta a altura da imagem para mobile */
+    height: 30%;
   }
   ul {
-    flex-direction: column; /* Coloca os itens da navbar em coluna em mobile */
-    background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)); /* Cor de fundo para mobile */
+    flex-direction: column;
+    background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3));
     position: absolute;
-    top: 5.5vh; /* Espaço do topo */
+    top: 5.5vh;
     left: 0;
     right: 0;
-    display: none; /* Inicialmente oculto */
-    z-index: 20; /* Acima de outros elementos */
-    width: 100vw; /* Ocupar 100% da largura da viewport */
-    max-width: 210%; /* Garantir que não exceda a largura */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    align-items: center; /* Centraliza os itens horizontalmente */
+    display: none;
+    z-index: 20;
+    width: 100vw;
+    max-width: 210%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
   }
   .navbar-nav li {
-    text-align: center; /* Centraliza o texto dos itens da navbar */
-    margin: 10px 0; /* Margem entre os itens */
+    text-align: center;
+    margin: 10px 0;
   }
   .navbar.active ul {
-    display: flex; /* Exibe a navbar ao ativar */
+    display: flex;
   }
   .navbar li {
-    margin: 10px 0; /* Margem entre itens da navbar em mobile */
+    margin: 10px 0;
+  }
+}
+/* Estilo para as imagens acima dos títulos */
+.rules-icon, .evaluation-icon, .awards-icon {
+  display: block;
+  margin: 0 auto 20px; /* Centraliza a imagem e adiciona um espaço abaixo */
+  max-width: 100px; /* Ajusta o tamanho da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Ajustes para telas menores que 480px */
+@media (max-width: 480px) {
+  .text-box h1 {
+    font-size: 40px;
+  }
+  .text-box h3 {
+    font-size: 14px;
+  }
+  ul {
+    padding: 15px;
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .highway {
+    height: 120px; /* Ajusta para telas pequenas */
+    animation: highway 3s linear infinite; /* Ajusta a velocidade da animação */
+  }
+  .city {
+    height: 150px; /* Ajusta para telas pequenas */
+    animation: city 15s linear infinite; /* Ajusta a velocidade da animação */
+  }
+}
+/* Ajustes para telas entre 481px e 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  ul {
+    padding: 20px;
+    width: 100vw;
+    max-width: 210%;
   }
 }
 

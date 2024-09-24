@@ -13,6 +13,14 @@
 
 .rules-text-box {
   text-align: left; /* Mantém o texto à esquerda */
+  position: relative; /* Permite posicionar elementos dentro */
+}
+
+.rules-text-box img {
+  display: block; /* Garante que a imagem esteja em uma nova linha */
+  margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo */
+  max-width: 100px; /* Ajusta o tamanho da imagem */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 .rules-text-box h1 {

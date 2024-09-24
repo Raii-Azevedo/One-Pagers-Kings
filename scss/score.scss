@@ -1,0 +1,56 @@
+.evaluation-criteria-section {
+    position: absolute; 
+    top: 35%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    max-width: 1200px; 
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.evaluation-text-box {
+    text-align: center; /* Centraliza o texto do título e subtítulo */
+}
+
+.evaluation-text-box h1,
+.evaluation-text-box h3 {
+    font-size: 48px; 
+    margin-bottom: 20px; 
+}
+
+.evaluation-text-box h3 {
+    font-size: 24px; 
+    margin-bottom: 15px; 
+}
+
+.criteria {
+    margin-top: 20px; 
+    margin-bottom: 40px; 
+    text-align: left; /* Mantém o texto à esquerda */
+}
+
+.criterion {
+    margin-bottom: 15px; 
+}
+
+.evaluation-text-box button {
+    display: block; 
+    margin: 20px auto 0; /* Centraliza o botão */
+    padding: 12px 24px; 
+    border: none; 
+    background: rgba(255, 255, 255, 0.4); 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 18px; 
+    transition: background 0.3s ease, transform 0.2s ease; 
+}
+
+.evaluation-text-box button:hover {
+    background: rgba(255, 255, 255, 0.6); 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+}

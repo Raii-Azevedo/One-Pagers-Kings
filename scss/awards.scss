@@ -1,0 +1,46 @@
+.awards-section {
+    position: absolute; 
+    top: 35%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    max-width: 1000px; 
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.awards-text-box {
+    text-align: center; /* Centraliza o texto do título e subtítulo */
+}
+
+.awards-text-box h1 {
+    font-size: 48px; 
+    margin-bottom: 20px; 
+}
+
+.awards-text-box p {
+    font-size: 18px; 
+    margin-bottom: 20px; 
+    text-align: left; /* Mantém o texto à esquerda */
+}
+
+.awards-text-box button {
+    display: block; 
+    margin: 20px auto 0; 
+    padding: 12px 24px; 
+    border: none; 
+    background: rgba(255, 255, 255, 0.4); 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 18px; 
+    transition: background 0.3s ease, transform 0.2s ease; 
+}
+
+.awards-text-box button:hover {
+    background: rgba(255, 255, 255, 0.6); 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+}
