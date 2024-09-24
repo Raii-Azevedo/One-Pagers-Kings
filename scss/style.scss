@@ -101,9 +101,12 @@ ul li a:hover {
 
 .text-box h1 {
     font-size: 110px;
-    line-height: 1; 
-    font-weight: 600; 
-    margin: 0; 
+    line-height: 100px; 
+    margin-left: -10px; 
+    color: transparent;
+    -webkit-text-stroke: 2px #fff ;
+    background: url(img/);
+    -webkit-background-clip: text;
 }
 
 .text-box h3 {
