@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.rules-section {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  max-width: 1000px;
+  background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para destacar o texto */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+.rules-text-box {
+  text-align: left; /* Mantém o texto à esquerda */
+}
+
+.rules-text-box h1 {
+  text-align: center; /* Centraliza o título */
+  font-size: 50px; /* Tamanho do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.rules-text-box p {
+  font-size: 18px; /* Tamanho do texto */
+  margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+}
+
+.rules-text-box button {
+  display: block; /* Faz o botão ocupar toda a largura disponível */
+  margin: 20px auto 0; /* Margem automática para centralizar o botão */
+  padding: 10px 20px; /* Tamanho do botão */
+  border: none; /* Remove a borda */
+  background: rgba(255, 255, 255, 0.3); /* Fundo do botão */
+  color: #fff; /* Cor do texto */
+  cursor: pointer; /* Muda o cursor para pointer */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background 0.3s ease; /* Transição suave */
+}
+
+.rules-text-box button:hover {
+  background: rgba(255, 255, 255, 0.5); /* Efeito de hover */
+}
+
+/*# sourceMappingURL=rules.css.map */

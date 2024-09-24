@@ -1,58 +1,54 @@
 @charset "UTF-8";
+/* Estilo geral */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+  box-sizing: border-box;
 }
 
 body {
-  overflow-y: hidden; /* Remove o scroll horizontal */
+  overflow-y: hidden;
 }
 
 .header {
   width: 100%;
-  height: 5vh; /* Altura do header */
-  background-image: linear-gradient(rgba(193, 66, 151, 0.6), rgba(72, 90, 216, 0.6)), url(../img/sky2.avif);
+  height: 5vh;
+  background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)), url(../img/sky2.avif);
   background-size: cover;
-  display: flex; /* Faz o header ser um contêiner flexível */
-  align-items: center; /* Alinha verticalmente os itens no centro */
-  justify-content: space-between; /* Espaça logo e menu para extremidades */
-  padding: 0 10px; /* Espaçamento interno horizontal */
-  position: relative; /* Garante que o header não interfere no hero */
-  z-index: 10; /* Mantém o header sobre o hero */
-}
-
-.logo {
-  display: flex; /* Permite que o logo ocupe o espaço necessário */
-  align-items: center; /* Alinha o logo verticalmente */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo img {
-  max-height: 100%; /* Limita a altura da imagem a 4vh */
-  width: auto; /* Mantém a proporção */
+  max-height: 100%;
+  width: auto;
 }
 
 .navbar {
-  margin-left: auto; /* Empurra a navbar para a direita */
+  margin-left: auto;
 }
 
 ul {
-  display: flex; /* Alinha os itens da lista na horizontal */
-  list-style: none; /* Remove os marcadores da lista */
+  display: flex;
+  list-style: none;
 }
 
 ul li {
-  margin-left: 20px; /* Espaçamento entre os itens do menu */
+  margin-left: 20px;
 }
 
 ul li a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: white !important; /* Cor do texto padrão */
-  transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+  text-decoration: none;
+  color: white !important;
+  transition: color 0.3s ease;
 }
 
 ul li a:hover {
-  color: rgb(128, 0, 128) !important; /* Cor roxa no hover */
+  color: rgb(128, 0, 128) !important;
 }
 
 .hero {
@@ -63,49 +59,53 @@ ul li a:hover {
   background-position: center;
   position: relative;
   overflow-x: hidden;
-  margin-top: -5vh; /* Mova o hero para cima para evitar espaço */
-  z-index: 1; /* Mantém o hero atrás do header */
+  margin-top: -5vh;
+  z-index: 1;
 }
 
-.hero-title {
-  position: absolute; /* Para posicioná-lo sobre o fundo do hero */
-  top: 20%; /* Ajuste conforme necessário */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Corrige a centralização */
-  font-size: 4rem; /* Tamanho da fonte grande */
+.text-box {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-box h1 {
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0;
+}
+
+.text-box h3 {
+  font-size: 20px;
+  margin: 10px 0 0;
+  font-weight: 600;
+}
+
+.text-box a {
+  display: inline-block; /* Para aplicar margem corretamente */
+  margin: 20px auto; /* Margem superior e inferior */
+  padding: 10px 15px; /* Tamanho do botão */
+  border: 2px solid white; /* Borda branca */
+  background: transparent; /* Fundo transparente */
   color: white; /* Cor do texto */
   text-align: center; /* Centraliza o texto */
-  animation: fadeIn 2s ease; /* Animação de entrada */
+  text-decoration: none; /* Remove sublinhado */
+  transition: background 0.3s ease; /* Transição suave para o hover */
 }
 
-.hero-description {
-  position: absolute; /* Para posicioná-lo sobre o fundo do hero */
-  top: 30%; /* Ajuste conforme necessário */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Corrige a centralização */
-  font-size: 1.5rem; /* Tamanho da fonte da descrição */
-  color: white; /* Cor do texto */
-  text-align: center; /* Centraliza o texto */
-  animation: fadeIn 2s ease 0.5s; /* Animação de entrada com delay */
-}
-
-@keyframes fadeAndColor {
-  0% {
-    opacity: 0; /* Começa invisível */
-    color: rgba(255, 255, 255, 0); /* Começa transparente */
-  }
-  100% {
-    opacity: 1; /* Termina visível */
-    color: white; /* Cor final */
-  }
-}
-.hero-title, .hero-description {
-  animation: fadeAndColor 2s ease forwards; /* Use este para ambos */
+.text-box a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Efeito de hover com leve transparência */
 }
 
 .highway {
   height: 200px;
-  width: 500%; /* Mudar para 100% para ocupar toda a largura */
+  width: 500%;
   background-image: url(../img/road.jpg);
   position: absolute;
   bottom: 0;
@@ -114,12 +114,12 @@ ul li a:hover {
 
 @keyframes highway {
   100% {
-    transform: translateX(-3400px); /* Ajusta para que a animação use 100% da largura */
+    transform: translateX(-3400px);
   }
 }
 .city {
   height: 250px;
-  width: 500%; /* Mudar para 100% para ocupar toda a largura */
+  width: 500%;
   background-image: url(../img/city.png);
   position: absolute;
   bottom: 200px;
@@ -128,7 +128,7 @@ ul li a:hover {
 
 @keyframes city {
   100% {
-    transform: translateX(-1800px); /* Ajusta para que a animação use 100% da largura */
+    transform: translateX(-1800px);
   }
 }
 img {
@@ -141,23 +141,23 @@ img {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 768px) { /* Ajustes para telas pequenas */
+@media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem; /* Tamanho menor da fonte */
-    top: 15%; /* Ajuste a posição */
+    font-size: 2.5rem;
+    top: 15%;
   }
   .hero-description {
-    font-size: 1rem; /* Tamanho menor da descrição */
-    top: 25%; /* Ajuste a posição */
+    font-size: 1rem;
+    top: 25%;
   }
   .highway {
-    height: 150px; /* Ajuste para telas menores */
+    height: 150px;
   }
   .city {
-    height: 200px; /* Ajuste para telas menores */
+    height: 200px;
   }
   img {
-    height: 30%; /* Ajuste para telas menores */
+    height: 30%;
   }
 }
 
