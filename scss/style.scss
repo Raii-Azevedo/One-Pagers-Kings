@@ -95,18 +95,28 @@ ul li a:hover {
     left: 50%; 
     transform: translate(-50%, -50%); 
     text-align: center; 
-    max-width: 600px; 
     margin: 0 auto; 
 }
 
 .text-box h1 {
-    font-size: 110px;
-    line-height: 100px; 
+    font-size: 150px;
+    line-height: 120px; 
     margin-left: -10px; 
     color: transparent;
-    -webkit-text-stroke: 2px #fff ;
-    background: url(img/);
+    -webkit-text-stroke: 1px #fff;
+    background: url(../img/back.png); 
+    background-size: cover; /* ou contain */
     -webkit-background-clip: text;
+    background-clip: text; 
+    background-position: 0 0; 
+    display: inline-block; /* Isso é importante */
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
 }
 
 .text-box h3 {
@@ -118,7 +128,8 @@ ul li a:hover {
 .text-box h4 {
     font-size: 15px;
     margin: 10px 0 0; 
-    font-weight: 600; 
+    font-weight: 800; 
+    margin-bottom: 10px;
 }
 
 .text-box a {
@@ -130,7 +141,8 @@ ul li a:hover {
     color: white; 
     text-align: center; 
     text-decoration: none; 
-    transition: background 0.3s ease; 
+    transition: background-color 0.3s ease-in 0s, transform 0.3s ease-in-out;
+    width: 200px; /* Defina uma largura específica */
 }
 
 .text-box a:hover {
