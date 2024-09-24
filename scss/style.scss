@@ -1,6 +1,57 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+body {
+    overflow-y: hidden; /* Remove o scroll horizontal */
+}
+
+.header {
+    width: 100%;
+    height: 5vh; /* Altura do header */
+    background-image: linear-gradient(rgba(193, 66, 151, 0.6), rgba(72, 90, 216, 0.6)), url(../img/sky2.avif);
+    background-size: cover;
+    display: flex; /* Faz o header ser um contêiner flexível */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Espaça logo e menu para extremidades */
+    padding: 0 10px; /* Espaçamento interno horizontal */
+    position: relative; /* Garante que o header não interfere no hero */
+    z-index: 10; /* Mantém o header sobre o hero */
+}
+
+.logo {
+    display: flex; /* Permite que o logo ocupe o espaço necessário */
+    align-items: center; /* Alinha o logo verticalmente */
+}
+
+.logo img {
+    max-height: 100%; /* Limita a altura da imagem a 4vh */
+    width: auto; /* Mantém a proporção */
+}
+
+.navbar {
+    margin-left: auto; /* Empurra a navbar para a direita */
+}
+
+ul {
+    display: flex; /* Alinha os itens da lista na horizontal */
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+ul li {
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+}
+
+ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white !important; /* Cor do texto padrão */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+ul li a:hover {
+    color: rgba(128, 0, 128, 1) !important; /* Cor roxa no hover */
 }
 
 .hero {
@@ -11,11 +62,51 @@
     background-position: center;
     position: relative;
     overflow-x: hidden;
+    margin-top: -5vh; /* Mova o hero para cima para evitar espaço */
+    z-index: 1; /* Mantém o hero atrás do header */
 }
 
-.highway{
+.hero-title {
+    position: absolute; /* Para posicioná-lo sobre o fundo do hero */
+    top: 20%; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige a centralização */
+    font-size: 4rem; /* Tamanho da fonte grande */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    animation: fadeIn 2s ease; /* Animação de entrada */
+}
+
+.hero-description {
+    position: absolute; /* Para posicioná-lo sobre o fundo do hero */
+    top: 30%; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige a centralização */
+    font-size: 1.5rem; /* Tamanho da fonte da descrição */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    animation: fadeIn 2s ease 0.5s; /* Animação de entrada com delay */
+}
+
+@keyframes fadeAndColor {
+    0% {
+        opacity: 0; /* Começa invisível */
+        color: rgba(255, 255, 255, 0); /* Começa transparente */
+    }
+    100% {
+        opacity: 1; /* Termina visível */
+        color: white; /* Cor final */
+    }
+}
+
+.hero-title, .hero-description {
+    animation: fadeAndColor 2s ease forwards; /* Use este para ambos */
+}
+
+
+.highway {
     height: 200px;
-    width: 500%;
+    width: 500%; /* Mudar para 100% para ocupar toda a largura */
     background-image: url(../img/road.jpg);
     position: absolute;
     bottom: 0;
@@ -23,14 +114,14 @@
 }
 
 @keyframes highway {
-    100%{ 
-        transform: translateX(-3400px);
+    100% { 
+        transform: translateX(-3400px); /* Ajusta para que a animação use 100% da largura */
     }
 }
 
-.city{
+.city {
     height: 250px;
-    width: 500%;
+    width: 500%; /* Mudar para 100% para ocupar toda a largura */
     background-image: url(../img/city.png);
     position: absolute;
     bottom: 200px;
@@ -38,8 +129,8 @@
 }
 
 @keyframes city {
-    100%{ 
-        transform: translateX(-1800px);
+    100% { 
+        transform: translateX(-1800px); /* Ajusta para que a animação use 100% da largura */
     }
 }
 
@@ -52,3 +143,27 @@ img {
     z-index: 1;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 768px) { /* Ajustes para telas pequenas */
+    .hero-title {
+        font-size: 2.5rem; /* Tamanho menor da fonte */
+        top: 15%; /* Ajuste a posição */
+    }
+
+    .hero-description {
+        font-size: 1rem; /* Tamanho menor da descrição */
+        top: 25%; /* Ajuste a posição */
+    }
+
+    .highway {
+        height: 150px; /* Ajuste para telas menores */
+    }
+
+    .city {
+        height: 200px; /* Ajuste para telas menores */
+    }
+
+    img {
+        height: 30%; /* Ajuste para telas menores */
+    }
+}
