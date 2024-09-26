@@ -324,5 +324,54 @@ img {
     height: 20%; /* Diminuído para ocupar menos espaço na tela */
   }
 }
+/* Telas menores que 375px */
+@media (max-width: 360px) {
+  .text-box h1 {
+    font-size: 6vw; /* Reduz ainda mais para caber na tela */
+  }
+  .text-box h3 {
+    font-size: 2.5vw; /* Um pouco menor para manter legibilidade */
+  }
+  ul {
+    padding: 8px; /* Ajusta o padding para um layout mais compacto */
+  }
+  .highway {
+    height: 8vh; /* Menor altura para dar mais espaço vertical */
+    width: 1200%; /* Largura aumentada para garantir que não haja lacunas */
+    animation: highway 8s linear infinite; /* Animação suavizada para telas menores */
+  }
+  .city {
+    height: 28vh; /* Ajuste para um melhor equilíbrio visual */
+    bottom: 8vh; /* Mantém a cidade alinhada com a estrada */
+    width: 700%; /* Ajustado para acompanhar a largura da highway */
+    animation: city 12s linear infinite; /* Animação mais lenta */
+  }
+  img {
+    height: 18%; /* Diminuído para manter o foco no conteúdo */
+  }
+  .navbar-nav li {
+    margin: 4px 0; /* Ajusta o espaçamento entre os itens do menu */
+  }
+  .rules-section,
+  .evaluation-criteria-section,
+  .awards-section {
+    padding: 8px; /* Reduz o padding para aproveitar melhor o espaço */
+  }
+  .rules-text-box h1,
+  .evaluation-text-box h1,
+  .awards-text-box h1 {
+    font-size: 16px; /* Ajuste para manter legibilidade */
+  }
+  .rules-text-box p,
+  .evaluation-text-box p,
+  .awards-text-box p {
+    font-size: 10px; /* Texto menor, mas ainda legível */
+  }
+  .rules-text-box button,
+  .evaluation-text-box button,
+  .awards-text-box button {
+    font-size: 9px; /* Botões ajustados para telas pequenas */
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
