@@ -240,13 +240,13 @@ img {
     font-size: 3vw;
   }
   .highway {
-    height: 12vh; /* Altura ajustada */
+    height: 10vh; /* Altura ajustada */
     width: 600%; /* Cobertura da tela ajustada para a animação */
     animation: highway 6s linear infinite; /* Velocidade ajustada */
   }
   .city {
-    height: 30vh; /* Ajustado para dar uma sensação de profundidade */
-    bottom: 10.5vh; /* Alinhado logo acima da pista */
+    height: 50vh; /* Ajustado para dar uma sensação de profundidade */
+    bottom: 25vh; /* Alinhado logo acima da pista */
     width: 500%; /* Ajustado para seguir o mesmo padrão da highway */
     animation: city 10s linear infinite; /* Velocidade ajustada */
   }

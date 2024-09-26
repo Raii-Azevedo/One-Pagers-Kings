@@ -246,14 +246,14 @@ img {
     }
 
     .highway {
-        height: 12vh; /* Altura ajustada */
+        height: 10vh; /* Altura ajustada */
         width: 600%; /* Cobertura da tela ajustada para a animação */
         animation: highway 6s linear infinite; /* Velocidade ajustada */
     }
 
     .city {
-        height: 30vh; /* Ajustado para dar uma sensação de profundidade */
-        bottom: 10.5vh; /* Alinhado logo acima da pista */
+        height: 50vh; /* Ajustado para dar uma sensação de profundidade */
+        bottom: 25vh; /* Alinhado logo acima da pista */
         width: 500%; /* Ajustado para seguir o mesmo padrão da highway */
         animation: city 10s linear infinite; /* Velocidade ajustada */
     }
@@ -318,11 +318,11 @@ img {
 /* Telas menores que 480px */
 @media (max-width: 480px) {
     .text-box h1 {
-        font-size: 7vw; 
+        font-size: 9vw; 
     }
 
     .text-box h3 {
-        font-size: 3vw; 
+        font-size: 5vw; 
     }
 
     ul {
@@ -350,11 +350,11 @@ img {
 /* Telas menores que 375px */
 @media (max-width: 360px) {
     .text-box h1 {
-        font-size: 6vw; /* Reduz ainda mais para caber na tela */
+        font-size: 8vw; /* Reduz ainda mais para caber na tela */
     }
 
     .text-box h3 {
-        font-size: 2.5vw; /* Um pouco menor para manter legibilidade */
+        font-size: 3.5vw; /* Um pouco menor para manter legibilidade */
     }
 
     ul {
