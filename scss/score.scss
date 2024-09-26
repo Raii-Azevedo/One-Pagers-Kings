@@ -4,30 +4,29 @@
     left: 50%; 
     transform: translate(-50%, -50%); 
     color: #fff; 
-    max-width: 1200px; 
-    background: rgba(0, 0, 0, 0.4); 
-    padding: 30px; 
-    border-radius: 15px; 
+    max-width: 90%; /* Mantém responsividade */
+    background: rgba(0, 0, 0, 0.3); /* Alterado para combinar com a rules-section */
+    padding: 20px; 
+    border-radius: 10px; /* Bordas arredondadas mais sutis */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .evaluation-text-box {
-    text-align: center; /* Centraliza o texto do título e subtítulo */
+    text-align: left; /* Mantém o texto à esquerda, como na rules-section */
 }
 
-.evaluation-text-box h1,
-.evaluation-text-box h3 {
-    font-size: 48px; 
-    margin-bottom: 20px; 
-}
-
-.evaluation-text-box h3 {
-    font-size: 24px; 
+.evaluation-text-box h1 {
+    font-size: 24px; /* Tamanho fixo ajustado */
     margin-bottom: 15px; 
 }
 
+.evaluation-text-box h3 {
+    font-size: 18px; /* Tamanho fixo ajustado */
+    margin-bottom: 10px; 
+}
+
 .evaluation-text-box h4 {
-    font-size: 18px;
+    font-size: 16px; /* Tamanho fixo ajustado */
     margin: 10px 0 0; 
     font-weight: 800; 
 }
@@ -35,7 +34,7 @@
 .criteria {
     margin-top: 20px; 
     margin-bottom: 40px; 
-    text-align: left; /* Mantém o texto à esquerda */
+    text-align: left; 
 }
 
 .criterion {
@@ -44,19 +43,58 @@
 
 .evaluation-text-box button {
     display: block; 
-    margin: 20px auto 0; /* Centraliza o botão */
-    padding: 12px 24px; 
+    margin: 20px auto 0; 
+    padding: 10px 20px; 
     border: none; 
-    background: rgba(255, 255, 255, 0.4); 
+    background: rgba(255, 255, 255, 0.3); 
     color: #fff; 
     cursor: pointer; 
     border-radius: 5px; 
-    font-size: 18px; 
-    transition: background 0.3s ease, transform 0.2s ease; 
+    font-size: 16px; /* Tamanho fixo ajustado */
+    transition: background 0.3s ease; 
 }
 
 .evaluation-text-box button:hover {
-    background: rgba(255, 255, 255, 0.6); 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    background: rgba(255, 255, 255, 0.5); 
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .evaluation-criteria-section {
+        padding: 15px; 
+    }
+
+    .evaluation-text-box h1 {
+        font-size: 20px; 
+    }
+
+    .evaluation-text-box h3 {
+        font-size: 16px; 
+    }
+
+    .evaluation-text-box h4 {
+        font-size: 14px; 
+    }
+
+    .evaluation-text-box button {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .evaluation-text-box h1 {
+        font-size: 18px; 
+    }
+
+    .evaluation-text-box h3 {
+        font-size: 14px; 
+    }
+
+    .evaluation-text-box h4 {
+        font-size: 12px; 
+    }
+
+    .evaluation-text-box button {
+        font-size: 12px; 
+    }
 }

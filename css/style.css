@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Estilo geral */
 * {
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  overflow-y: hidden; 
+  overflow-y: hidden;
 }
 
 .rules-section,
@@ -18,15 +19,15 @@ body {
 /* Cabeçalho */
 .header {
   width: 100%;
-  height: 5vh; 
+  height: 5vh;
   background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)), url(../img/sky2.avif);
   background-size: cover;
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 0 10px; 
-  position: relative; 
-  z-index: 10; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -39,39 +40,28 @@ body {
 }
 
 .navbar {
-  margin-left: auto; 
+  margin-left: auto;
   position: relative; /* Para que a imagem se posicione em relação a este elemento */
 }
 
 ul {
-  display: flex; 
-  list-style: none; 
+  display: flex;
+  list-style: none;
   align-items: center; /* Alinha verticalmente os itens do menu */
 }
 
 ul li {
-  margin-left: 20px; 
+  margin-left: 10px;
 }
 
 ul li a {
-  text-decoration: none; 
-  color: white !important; 
-  transition: color 0.3s ease; 
+  text-decoration: none;
+  color: white !important;
+  transition: color 0.3s ease;
 }
 
 ul li a:hover {
-  color: rgba(128, 0, 128, 1) !important; 
-}
-
-/* Ajustes para a imagem do ícone de regras */
-.rules-icon {
-  position: absolute; /* Para posicionar em relação ao contêiner */
-  left: 10px; /* Alinha à esquerda com um pequeno espaço */
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Ajusta para centralizar exatamente */
-  max-width: 40px; /* Ajusta o tamanho da imagem */
-  height: auto; /* Mantém a proporção da imagem */
-  z-index: 20; /* Coloca acima de outros elementos */
+  color: rgb(128, 0, 128) !important;
 }
 
 /* Hero Section */
@@ -79,69 +69,68 @@ ul li a:hover {
   width: 100%;
   height: 100vh;
   background-image: url(../img/sky2.avif);
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   position: relative;
   overflow-x: hidden;
-  margin-top: -5vh; 
-  z-index: 1; 
+  margin-top: -5vh;
+  z-index: 1;
 }
 
 .text-box {
-  color: #fff; 
-  position: absolute; 
-  top: 35%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  text-align: center; 
-  margin: 0 auto; 
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0 auto;
 }
 
 .text-box h1 {
-  font-size: 8vw; /* Usa unidades responsivas para o tamanho da fonte */
-  line-height: 1.2em; 
+  font-size: 6vw; /* Diminuído */
+  line-height: 1.1em;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
-  background: url(../img/back.png); 
+  background: url(../img/back.png);
   background-size: cover;
   -webkit-background-clip: text;
-  background-clip: text; 
-  background-position: 0 0; 
+  background-clip: text;
+  background-position: 0 0;
   display: inline-block;
   animation: back 20s linear infinite;
 }
 
 @keyframes back {
   100% {
-      background-position: 2000px 0;
+    background-position: 2000px 0;
   }
 }
-
 .text-box h3, .text-box h4 {
-  font-size: 2.5vw; /* Ajuste responsivo para tamanhos de texto */
-  margin: 10px 0 0; 
+  font-size: 2vw; /* Diminuído */
+  margin: 5px 0 0;
 }
 
 .text-box a {
-  display: inline-block; 
-  margin: 20px auto; 
-  padding: 10px 15px; 
-  border: 2px solid white; 
-  background: transparent; 
-  color: white; 
-  text-align: center; 
-  text-decoration: none; 
+  display: inline-block;
+  margin: 15px auto;
+  padding: 8px 12px; /* Reduzido */
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
   transition: background-color 0.3s ease-in 0s, transform 0.3s ease-in-out;
-  width: 200px; /* Defina uma largura específica */
+  width: 160px; /* Diminuído */
 }
 
 .text-box a:hover {
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .highway {
-  height: 20vh;
-  width: 500%; 
+  height: 20vh; /* Reduzido */
+  width: 500%;
   background-image: url(../img/road.jpg);
   position: absolute;
   bottom: 0;
@@ -149,14 +138,13 @@ ul li a:hover {
 }
 
 @keyframes highway {
-  100% { 
-      transform: translateX(-3400px); 
+  100% {
+    transform: translateX(-3400px);
   }
 }
-
 .city {
-  height: 25vh;
-  width: 500%; 
+  height: 20vh; /* Reduzido */
+  width: 500%;
   background-image: url(../img/city.png);
   position: absolute;
   bottom: 20vh;
@@ -164,16 +152,15 @@ ul li a:hover {
 }
 
 @keyframes city {
-  100% { 
-      transform: translateX(-1800px); 
+  100% {
+    transform: translateX(-1800px);
   }
 }
-
 img {
-  height: 40%;
+  height: 30%; /* Reduzido */
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 30px; /* Ajustado */
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -181,85 +168,161 @@ img {
 /* Estilo para as imagens acima dos títulos */
 .rules-icon, .evaluation-icon, .awards-icon {
   display: block;
-  margin: 0 auto 20px; /* Centraliza a imagem e adiciona um espaço abaixo */
-  max-width: 10vw; /* Ajusta o tamanho da imagem para ser responsivo */
-  height: auto; /* Mantém a proporção da imagem */
+  margin: 0 auto 10px; /* Diminuído */
+  max-width: 8vw; /* Reduzido */
+  height: auto;
+}
+
+/* Seções */
+.rules-section,
+.evaluation-criteria-section,
+.awards-section {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  max-width: 80%; /* Ajuste para responsividade */
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px; /* Diminuído */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.rules-text-box,
+.evaluation-text-box,
+.awards-text-box {
+  text-align: left;
+}
+
+.rules-text-box h1,
+.evaluation-text-box h1,
+.awards-text-box h1 {
+  font-size: 20px; /* Diminuído */
+  margin-bottom: 15px; /* Diminuído */
+}
+
+.rules-text-box p,
+.evaluation-text-box p,
+.awards-text-box p {
+  font-size: 14px; /* Diminuído */
+  margin-bottom: 8px; /* Diminuído */
+}
+
+.rules-text-box button,
+.evaluation-text-box button,
+.awards-text-box button {
+  display: block;
+  margin: 15px auto 0; /* Diminuído */
+  padding: 8px 16px; /* Diminuído */
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px; /* Diminuído */
+  transition: background 0.3s ease;
+}
+
+.rules-text-box button:hover,
+.evaluation-text-box button:hover,
+.awards-text-box button:hover {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 /* MEDIA QUERIES */
-
 /* Telas menores que 768px */
 @media (max-width: 768px) {
   .text-box h1 {
-      font-size: 10vw; /* Ajusta para telas menores */
+    font-size: 8vw;
   }
-
   .text-box h3 {
-      font-size: 4vw; 
+    font-size: 3vw;
   }
-
   .highway {
-      height: 15vh; 
+    height: 12vh; /* Altura ajustada */
+    width: 600%; /* Cobertura da tela ajustada para a animação */
+    animation: highway 6s linear infinite; /* Velocidade ajustada */
   }
-
   .city {
-      height: 20vh; 
+    height: 30vh; /* Ajustado para dar uma sensação de profundidade */
+    bottom: 10.5vh; /* Alinhado logo acima da pista */
+    width: 500%; /* Ajustado para seguir o mesmo padrão da highway */
+    animation: city 10s linear infinite; /* Velocidade ajustada */
   }
-
   img {
-      height: 30%; 
+    height: 25%; /* Diminuído */
   }
-
   ul {
-      flex-direction: column; 
-      background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)); 
-      position: absolute;
-      top: 5.5vh; 
-      left: 0;
-      right: 0;
-      display: none; 
-      z-index: 20; 
-      width: 100vw; 
-      padding: 20px; 
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-      align-items: center; 
+    flex-direction: column;
+    background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3));
+    position: absolute;
+    top: 5.5vh;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 20;
+    width: 100vw;
+    padding: 15px; /* Diminuído */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
   }
-  
   .navbar-nav li {
-      text-align: center; 
-      margin: 10px 0; 
+    text-align: center;
+    margin: 5px 0; /* Diminuído */
   }
-
   .navbar.active ul {
-      display: flex; 
+    display: flex;
   }
-
   .navbar li {
-      margin: 10px 0; 
+    margin: 5px 0; /* Diminuído */
+  }
+  .rules-section,
+  .evaluation-criteria-section,
+  .awards-section {
+    padding: 10px; /* Diminuído */
+  }
+  .rules-text-box h1,
+  .evaluation-text-box h1,
+  .awards-text-box h1 {
+    font-size: 18px; /* Diminuído */
+  }
+  .rules-text-box p,
+  .evaluation-text-box p,
+  .awards-text-box p {
+    font-size: 12px; /* Diminuído */
+  }
+  .rules-text-box button,
+  .evaluation-text-box button,
+  .awards-text-box button {
+    font-size: 10px; /* Diminuído */
   }
 }
-
 /* Telas menores que 480px */
 @media (max-width: 480px) {
   .text-box h1 {
-      font-size: 8vw; 
+    font-size: 7vw;
   }
-
   .text-box h3 {
-      font-size: 3vw; 
+    font-size: 3vw;
   }
-
   ul {
-      padding: 15px; 
+    padding: 10px; /* Diminuído */
   }
-
   .highway {
-      height: 12vh;
-      animation: highway 3s linear infinite;
+    height: 10vh; /* Ajustado para menor altura */
+    width: 900%; /* Aumentado para evitar o espaço vazio */
+    animation: highway 8s linear infinite; /* Ajuste para manter a fluidez da animação */
   }
-
   .city {
-      height: 15vh; 
-      animation: city 15s linear infinite;
+    height: 28vh; /* Aumentado para dar mais presença visual */
+    bottom: 10vh; /* Mantém a cidade logo acima da pista */
+    width: 400%; /* Ajustado para acompanhar a largura da highway */
+    animation: city 12s linear infinite; /* Suavização na animação */
+  }
+  img {
+    height: 20%; /* Diminuído para ocupar menos espaço na tela */
   }
 }
+
+/*# sourceMappingURL=style.css.map */

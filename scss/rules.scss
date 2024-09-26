@@ -4,47 +4,72 @@
     left: 50%; 
     transform: translate(-50%, -50%); 
     color: #fff; 
-    max-width: 1000px; 
-    background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para destacar o texto */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 90%; /* Ajuste responsivo */
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 20px; 
+    border-radius: 10px; 
 }
 
 .rules-text-box {
-    text-align: left; /* Mantém o texto à esquerda */
-    position: relative; /* Permite posicionar elementos dentro */
+    text-align: left; 
 }
 
 .rules-text-box img {
-    display: block; /* Garante que a imagem esteja em uma nova linha */
-    margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo */
-    max-width: 100px; /* Ajusta o tamanho da imagem */
-    height: auto; /* Mantém a proporção da imagem */
+    display: block; 
+    margin: 0 auto 15px; 
+    max-width: 60%; /* Reduzido para mais equilíbrio */
+    height: auto; 
 }
 
 .rules-text-box h1 {
-    text-align: center; /* Centraliza o título */
-    font-size: 50px; /* Tamanho do título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; 
+    font-size: 24px; /* Tamanho fixo mais razoável */
+    margin-bottom: 15px; 
 }
 
 .rules-text-box p {
-    font-size: 18px; /* Tamanho do texto */
-    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+    font-size: 16px; /* Tamanho fixo mais razoável */
+    margin-bottom: 10px; 
 }
 
 .rules-text-box button {
-    display: block; /* Faz o botão ocupar toda a largura disponível */
-    margin: 20px auto 0; /* Margem automática para centralizar o botão */
-    padding: 10px 20px; /* Tamanho do botão */
-    border: none; /* Remove a borda */
-    background: rgba(255, 255, 255, 0.3); /* Fundo do botão */
-    color: #fff; /* Cor do texto */
-    cursor: pointer; /* Muda o cursor para pointer */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background 0.3s ease; /* Transição suave */
+    display: block; 
+    margin: 20px auto 0; 
+    padding: 10px 20px; 
+    border: none; 
+    background: rgba(255, 255, 255, 0.3); 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background 0.3s ease; 
+    font-size: 16px; /* Tamanho fixo */
 }
 
 .rules-text-box button:hover {
-    background: rgba(255, 255, 255, 0.5); /* Efeito de hover */
+    background: rgba(255, 255, 255, 0.5); 
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .rules-section {
+        padding: 15px; 
+    }
+
+    .rules-text-box h1 {
+        font-size: 20px; 
+    }
+
+    .rules-text-box p {
+        font-size: 14px; 
+    }
+
+    .rules-text-box button {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .rules-text-box img {
+        max-width: 80%; /* Ajuste para telas menores */
+    }
 }
