@@ -5,7 +5,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  max-width: 90%; /* Ajuste responsivo */
+  max-width: 95%; /* Ajuste responsivo */
   background: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 10px;
