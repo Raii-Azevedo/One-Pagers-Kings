@@ -6,7 +6,7 @@
 }
 
 body {
-    overflow-y: hidden; 
+    overflow-y: auto; 
 }
 
 .rules-section,
@@ -168,13 +168,6 @@ img {
     z-index: 1;
 }
 
-/* Estilo para as imagens acima dos títulos */
-.rules-icon, .evaluation-icon, .awards-icon {
-    display: block;
-    margin: 0 auto 10px; /* Diminuído */
-    max-width: 8vw; /* Reduzido */
-    height: auto; 
-}
 
 /* Seções */
 .rules-section,
@@ -185,7 +178,8 @@ img {
     left: 50%; 
     transform: translate(-50%, -50%); 
     color: #fff; 
-    max-width: 80%; /* Ajuste para responsividade */
+    max-width: 100%; /* Ajuste para responsividade */
+    max-height: 70%;
     background: rgba(0, 0, 0, 0.4); 
     padding: 15px; /* Diminuído */
     border-radius: 10px; 
