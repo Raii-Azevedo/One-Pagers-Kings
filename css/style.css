@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Estilo geral */
 * {
   margin: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-  overflow-y: hidden;
+  overflow-y: hidden; 
 }
 
 .rules-section,
@@ -16,17 +15,18 @@ body {
   display: none; /* Esconde todas as seções inicialmente */
 }
 
+/* Cabeçalho */
 .header {
   width: 100%;
-  height: 5vh;
+  height: 5vh; 
   background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)), url(../img/sky2.avif);
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  position: relative;
-  z-index: 10;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0 10px; 
+  position: relative; 
+  z-index: 10; 
 }
 
 .logo {
@@ -39,28 +39,28 @@ body {
 }
 
 .navbar {
-  margin-left: auto;
+  margin-left: auto; 
   position: relative; /* Para que a imagem se posicione em relação a este elemento */
 }
 
 ul {
-  display: flex;
-  list-style: none;
+  display: flex; 
+  list-style: none; 
   align-items: center; /* Alinha verticalmente os itens do menu */
 }
 
 ul li {
-  margin-left: 20px;
+  margin-left: 20px; 
 }
 
 ul li a {
-  text-decoration: none;
-  color: white !important;
-  transition: color 0.3s ease;
+  text-decoration: none; 
+  color: white !important; 
+  transition: color 0.3s ease; 
 }
 
 ul li a:hover {
-  color: rgb(128, 0, 128) !important;
+  color: rgba(128, 0, 128, 1) !important; 
 }
 
 /* Ajustes para a imagem do ícone de regras */
@@ -74,81 +74,74 @@ ul li a:hover {
   z-index: 20; /* Coloca acima de outros elementos */
 }
 
+/* Hero Section */
 .hero {
   width: 100%;
   height: 100vh;
   background-image: url(../img/sky2.avif);
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
   position: relative;
   overflow-x: hidden;
-  margin-top: -5vh;
-  z-index: 1;
+  margin-top: -5vh; 
+  z-index: 1; 
 }
 
 .text-box {
-  color: #fff;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  margin: 0 auto;
+  color: #fff; 
+  position: absolute; 
+  top: 35%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+  margin: 0 auto; 
 }
 
 .text-box h1 {
-  font-size: 150px;
-  line-height: 120px;
-  margin-left: -10px;
+  font-size: 8vw; /* Usa unidades responsivas para o tamanho da fonte */
+  line-height: 1.2em; 
   color: transparent;
   -webkit-text-stroke: 1px #fff;
-  background: url(../img/back.png);
-  background-size: cover; /* ou contain */
+  background: url(../img/back.png); 
+  background-size: cover;
   -webkit-background-clip: text;
-  background-clip: text;
-  background-position: 0 0;
-  display: inline-block; /* Isso é importante */
+  background-clip: text; 
+  background-position: 0 0; 
+  display: inline-block;
   animation: back 20s linear infinite;
 }
 
 @keyframes back {
   100% {
-    background-position: 2000px 0;
+      background-position: 2000px 0;
   }
 }
-.text-box h3 {
-  font-size: 20px;
-  margin: 10px 0 0;
-  font-weight: 600;
-}
 
-.text-box h4 {
-  font-size: 15px;
-  margin: 10px 0 0;
-  font-weight: 800;
-  margin-bottom: 10px;
+.text-box h3, .text-box h4 {
+  font-size: 2.5vw; /* Ajuste responsivo para tamanhos de texto */
+  margin: 10px 0 0; 
 }
 
 .text-box a {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 10px 15px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  text-align: center;
-  text-decoration: none;
+  display: inline-block; 
+  margin: 20px auto; 
+  padding: 10px 15px; 
+  border: 2px solid white; 
+  background: transparent; 
+  color: white; 
+  text-align: center; 
+  text-decoration: none; 
   transition: background-color 0.3s ease-in 0s, transform 0.3s ease-in-out;
   width: 200px; /* Defina uma largura específica */
 }
 
 .text-box a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2); 
 }
 
 .highway {
-  height: 200px;
-  width: 500%;
+  height: 20vh;
+  width: 500%; 
   background-image: url(../img/road.jpg);
   position: absolute;
   bottom: 0;
@@ -156,24 +149,26 @@ ul li a:hover {
 }
 
 @keyframes highway {
-  100% {
-    transform: translateX(-3400px);
+  100% { 
+      transform: translateX(-3400px); 
   }
 }
+
 .city {
-  height: 250px;
-  width: 500%;
+  height: 25vh;
+  width: 500%; 
   background-image: url(../img/city.png);
   position: absolute;
-  bottom: 200px;
+  bottom: 20vh;
   animation: city 20s linear infinite;
 }
 
 @keyframes city {
-  100% {
-    transform: translateX(-1800px);
+  100% { 
+      transform: translateX(-1800px); 
   }
 }
+
 img {
   height: 40%;
   position: absolute;
@@ -183,98 +178,88 @@ img {
   z-index: 1;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  .text-box h1 {
-    font-size: 60px;
-  }
-  .text-box h3 {
-    font-size: 16px;
-  }
-  .highway {
-    height: 150px;
-    width: 400%; /* Ajusta a largura para melhor visualização */
-  }
-  @keyframes highway {
-    100% {
-      transform: translateX(-200%); /* Ajusta a animação para melhor visualização */
-    }
-  }
-  .city {
-    height: 200px;
-    width: 400%; /* Ajusta a largura para melhor visualização */
-  }
-  @keyframes city {
-    100% {
-      transform: translateX(-200%); /* Ajusta a animação para melhor visualização */
-    }
-  }
-  img {
-    height: 30%;
-  }
-  ul {
-    flex-direction: column;
-    background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3));
-    position: absolute;
-    top: 5.5vh;
-    left: 0;
-    right: 0;
-    display: none;
-    z-index: 20;
-    width: 100vw;
-    max-width: 210%;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    align-items: center;
-  }
-  .navbar-nav li {
-    text-align: center;
-    margin: 10px 0;
-  }
-  .navbar.active ul {
-    display: flex;
-  }
-  .navbar li {
-    margin: 10px 0;
-  }
-}
 /* Estilo para as imagens acima dos títulos */
 .rules-icon, .evaluation-icon, .awards-icon {
   display: block;
   margin: 0 auto 20px; /* Centraliza a imagem e adiciona um espaço abaixo */
-  max-width: 100px; /* Ajusta o tamanho da imagem */
+  max-width: 10vw; /* Ajusta o tamanho da imagem para ser responsivo */
   height: auto; /* Mantém a proporção da imagem */
 }
 
-/* Ajustes para telas menores que 480px */
-@media (max-width: 480px) {
+/* MEDIA QUERIES */
+
+/* Telas menores que 768px */
+@media (max-width: 768px) {
   .text-box h1 {
-    font-size: 40px;
+      font-size: 10vw; /* Ajusta para telas menores */
   }
+
   .text-box h3 {
-    font-size: 14px;
+      font-size: 4vw; 
   }
-  ul {
-    padding: 15px;
-    width: 100vw;
-    max-width: 100vw;
-  }
+
   .highway {
-    height: 120px; /* Ajusta para telas pequenas */
-    animation: highway 3s linear infinite; /* Ajusta a velocidade da animação */
+      height: 15vh; 
   }
+
   .city {
-    height: 150px; /* Ajusta para telas pequenas */
-    animation: city 15s linear infinite; /* Ajusta a velocidade da animação */
+      height: 20vh; 
   }
-}
-/* Ajustes para telas entre 481px e 768px */
-@media (min-width: 481px) and (max-width: 768px) {
+
+  img {
+      height: 30%; 
+  }
+
   ul {
-    padding: 20px;
-    width: 100vw;
-    max-width: 210%;
+      flex-direction: column; 
+      background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)); 
+      position: absolute;
+      top: 5.5vh; 
+      left: 0;
+      right: 0;
+      display: none; 
+      z-index: 20; 
+      width: 100vw; 
+      padding: 20px; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+      align-items: center; 
+  }
+  
+  .navbar-nav li {
+      text-align: center; 
+      margin: 10px 0; 
+  }
+
+  .navbar.active ul {
+      display: flex; 
+  }
+
+  .navbar li {
+      margin: 10px 0; 
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+  .text-box h1 {
+      font-size: 8vw; 
+  }
+
+  .text-box h3 {
+      font-size: 3vw; 
+  }
+
+  ul {
+      padding: 15px; 
+  }
+
+  .highway {
+      height: 12vh;
+      animation: highway 3s linear infinite;
+  }
+
+  .city {
+      height: 15vh; 
+      animation: city 15s linear infinite;
+  }
+}

@@ -1,5 +1,4 @@
 /* Estilo geral */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +15,7 @@ body {
     display: none; /* Esconde todas as seções inicialmente */
 }
 
-
+/* Cabeçalho */
 .header {
     width: 100%;
     height: 5vh; 
@@ -38,7 +37,6 @@ body {
     max-height: 40%; /* Garante que a imagem não exceda a altura da navbar */
     width: auto; /* Mantém a proporção da imagem */
 }
-
 
 .navbar {
     margin-left: auto; 
@@ -76,6 +74,7 @@ ul li a:hover {
     z-index: 20; /* Coloca acima de outros elementos */
 }
 
+/* Hero Section */
 .hero {
     width: 100%;
     height: 100vh;
@@ -99,17 +98,16 @@ ul li a:hover {
 }
 
 .text-box h1 {
-    font-size: 150px;
-    line-height: 120px; 
-    margin-left: -10px; 
+    font-size: 8vw; /* Usa unidades responsivas para o tamanho da fonte */
+    line-height: 1.2em; 
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     background: url(../img/back.png); 
-    background-size: cover; /* ou contain */
+    background-size: cover;
     -webkit-background-clip: text;
     background-clip: text; 
     background-position: 0 0; 
-    display: inline-block; /* Isso é importante */
+    display: inline-block;
     animation: back 20s linear infinite;
 }
 
@@ -119,17 +117,9 @@ ul li a:hover {
     }
 }
 
-.text-box h3 {
-    font-size: 20px;
+.text-box h3, .text-box h4 {
+    font-size: 2.5vw; /* Ajuste responsivo para tamanhos de texto */
     margin: 10px 0 0; 
-    font-weight: 600; 
-}
-
-.text-box h4 {
-    font-size: 15px;
-    margin: 10px 0 0; 
-    font-weight: 800; 
-    margin-bottom: 10px;
 }
 
 .text-box a {
@@ -150,7 +140,7 @@ ul li a:hover {
 }
 
 .highway {
-    height: 200px;
+    height: 20vh;
     width: 500%; 
     background-image: url(../img/road.jpg);
     position: absolute;
@@ -165,11 +155,11 @@ ul li a:hover {
 }
 
 .city {
-    height: 250px;
+    height: 25vh;
     width: 500%; 
     background-image: url(../img/city.png);
     position: absolute;
-    bottom: 200px;
+    bottom: 20vh;
     animation: city 20s linear infinite;
 }
 
@@ -188,36 +178,32 @@ img {
     z-index: 1;
 }
 
+/* Estilo para as imagens acima dos títulos */
+.rules-icon, .evaluation-icon, .awards-icon {
+    display: block;
+    margin: 0 auto 20px; /* Centraliza a imagem e adiciona um espaço abaixo */
+    max-width: 10vw; /* Ajusta o tamanho da imagem para ser responsivo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 /* MEDIA QUERIES */
+
+/* Telas menores que 768px */
 @media (max-width: 768px) {
     .text-box h1 {
-        font-size: 60px; 
+        font-size: 10vw; /* Ajusta para telas menores */
     }
 
     .text-box h3 {
-        font-size: 16px; 
+        font-size: 4vw; 
     }
 
     .highway {
-        height: 150px; 
-        width: 400%; /* Ajusta a largura para melhor visualização */
-    }
-
-    @keyframes highway {
-        100% { 
-            transform: translateX(-200%); /* Ajusta a animação para melhor visualização */
-        }
+        height: 15vh; 
     }
 
     .city {
-        height: 200px; 
-        width: 400%; /* Ajusta a largura para melhor visualização */
-    }
-
-    @keyframes city {
-        100% { 
-            transform: translateX(-200%); /* Ajusta a animação para melhor visualização */
-        }
+        height: 20vh; 
     }
 
     img {
@@ -234,7 +220,6 @@ img {
         display: none; 
         z-index: 20; 
         width: 100vw; 
-        max-width: 210%; 
         padding: 20px; 
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
         align-items: center; 
@@ -254,47 +239,27 @@ img {
     }
 }
 
-/* Estilo para as imagens acima dos títulos */
-.rules-icon, .evaluation-icon, .awards-icon {
-    display: block;
-    margin: 0 auto 20px; /* Centraliza a imagem e adiciona um espaço abaixo */
-    max-width: 100px; /* Ajusta o tamanho da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Ajustes para telas menores que 480px */
+/* Telas menores que 480px */
 @media (max-width: 480px) {
     .text-box h1 {
-        font-size: 40px; 
+        font-size: 8vw; 
     }
 
     .text-box h3 {
-        font-size: 14px; 
+        font-size: 3vw; 
     }
 
     ul {
         padding: 15px; 
-        width: 100vw; 
-        max-width: 100vw; 
     }
 
     .highway {
-        height: 120px; /* Ajusta para telas pequenas */
-        animation: highway 3s linear infinite; /* Ajusta a velocidade da animação */
+        height: 12vh;
+        animation: highway 3s linear infinite;
     }
 
     .city {
-        height: 150px; /* Ajusta para telas pequenas */
-        animation: city 15s linear infinite; /* Ajusta a velocidade da animação */
+        height: 15vh; 
+        animation: city 15s linear infinite;
     }
 }
-
-/* Ajustes para telas entre 481px e 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-    ul {
-        padding: 20px; 
-        width: 100vw; 
-        max-width: 210%; 
-    }
-}
-
