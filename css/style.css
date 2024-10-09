@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -19,7 +18,7 @@ body {
 /* Cabeçalho */
 .header {
   width: 100%;
-  height: 5vh;
+  height: 7vh;
   background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3)), url(../img/sky2.avif);
   background-size: cover;
   display: flex;
@@ -73,7 +72,7 @@ ul li a:hover {
   background-position: center;
   position: relative;
   overflow-x: hidden;
-  margin-top: -5vh;
+  margin-top: -3vh;
   z-index: 1;
 }
 
@@ -143,7 +142,7 @@ ul li a:hover {
   }
 }
 .city {
-  height: 20vh; /* Reduzido */
+  height: 41.5vh; /* Reduzido */
   width: 500%;
   background-image: url(../img/city.png);
   position: absolute;
@@ -240,15 +239,15 @@ img {
     font-size: 3vw;
   }
   .highway {
-    height: 10vh; /* Altura ajustada */
+    height: 15vh; /* Altura ajustada */
     width: 600%; /* Cobertura da tela ajustada para a animação */
     animation: highway 6s linear infinite; /* Velocidade ajustada */
   }
   .city {
     height: 50vh; /* Ajustado para dar uma sensação de profundidade */
-    bottom: 25vh; /* Alinhado logo acima da pista */
+    bottom: 14vh; /* Alinhado logo acima da pista */
     width: 500%; /* Ajustado para seguir o mesmo padrão da highway */
-    animation: city 10s linear infinite; /* Velocidade ajustada */
+    animation: city 15s linear infinite; /* Velocidade ajustada */
   }
   img {
     height: 25%; /* Diminuído */
@@ -311,13 +310,13 @@ img {
   }
   .highway {
     height: 10vh; /* Ajustado para menor altura */
-    width: 900%; /* Aumentado para evitar o espaço vazio */
-    animation: highway 8s linear infinite; /* Ajuste para manter a fluidez da animação */
+    width: 1000%; /* Aumentado para evitar o espaço vazio */
+    animation: highway 20s linear infinite; /* Ajuste para manter a fluidez da animação */
   }
   .city {
-    height: 28vh; /* Aumentado para dar mais presença visual */
-    bottom: 10vh; /* Mantém a cidade logo acima da pista */
-    width: 400%; /* Ajustado para acompanhar a largura da highway */
+    height: 50vh; /* Aumentado para dar mais presença visual */
+    bottom: 9vh; /* Mantém a cidade logo acima da pista */
+    width: 600%; /* Ajustado para acompanhar a largura da highway */
     animation: city 12s linear infinite; /* Suavização na animação */
   }
   img {
