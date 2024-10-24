@@ -4,14 +4,20 @@
   margin: 0;
   padding: 0;
 }
+html, body {
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+  max-width: 100%; /* Garante que a largura nunca ultrapasse 100% */
+}
 
 body {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .rules-section,
 .evaluation-criteria-section,
-.awards-section {
+.awards-section,
+.bracket-section,
+.game-section {
   display: none; /* Esconde todas as seções inicialmente */
 }
 
@@ -25,7 +31,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  position: relative;
+  position: fixed;
   z-index: 10;
 }
 
@@ -36,11 +42,18 @@ body {
 .logo-image {
   max-height: 40%; /* Garante que a imagem não exceda a altura da navbar */
   width: auto; /* Mantém a proporção da imagem */
+  position: absolute; /* Permite posicionar a imagem de forma absoluta */
+  top: 0;
+  left: 0;
+  margin: 15px; /* Adiciona um pequeno espaçamento, se necessário */
+  margin-left: 50px;
 }
+
 
 .navbar {
   margin-left: auto;
-  position: relative; /* Para que a imagem se posicione em relação a este elemento */
+  display: flex;
+  position: fixed; /* Para que a imagem se posicione em relação a este elemento */
 }
 
 ul {
@@ -73,21 +86,27 @@ ul li a:hover {
   position: relative;
   overflow-x: hidden;
   margin-top: -3vh;
+  margin-top: 7vh;
   z-index: 1;
 }
 
 .text-box {
   color: #fff;
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   margin: 0 auto;
+  width: 90%;
+}
+
+.text-box h1, .text-box h3, .text-box a {
+  max-width: 95%; /* Garante que o conteúdo ocupe toda a largura */
 }
 
 .text-box h1 {
-  font-size: 6vw; /* Diminuído */
+  font-size: 7vw; /* Diminuído */
   line-height: 1.1em;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
@@ -134,6 +153,7 @@ ul li a:hover {
   position: absolute;
   bottom: 0;
   animation: highway 5s linear infinite;
+  z-index: -2;
 }
 
 @keyframes highway {
@@ -148,6 +168,7 @@ ul li a:hover {
   position: absolute;
   bottom: 20vh;
   animation: city 20s linear infinite;
+  z-index: -2;
 }
 
 @keyframes city {
@@ -164,70 +185,126 @@ img {
   z-index: 1;
 }
 
-/* Estilo para as imagens acima dos títulos */
-.rules-icon, .evaluation-icon, .awards-icon {
-  display: block;
-  margin: 0 auto 10px; /* Diminuído */
-  max-width: 8vw; /* Reduzido */
-  height: auto;
+.run-img{
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Seções */
 .rules-section,
 .evaluation-criteria-section,
-.awards-section {
-  position: absolute;
-  top: 35%;
+.awards-section, 
+.bracket-section,
+.game-section {
+  position: fixed; /* Mantém a caixa centralizada e fixa na tela */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  max-width: 80%; /* Ajuste para responsividade */
+  max-width: 100%; 
+  max-height: 90vh; 
   background: rgba(0, 0, 0, 0.4);
-  padding: 15px; /* Diminuído */
+  padding: 20px; 
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Permite que a caixa em si role */
+  z-index: 5;
 }
 
 .rules-text-box,
 .evaluation-text-box,
-.awards-text-box {
-  text-align: left;
+.awards-text-box, 
+.bracket-text-box,
+.game-text-box {
+  flex: 1;
+  overflow-y: auto; /* Scroll somente no conteúdo */
+  padding-right: 10px;
+  max-width: 95%;
 }
 
 .rules-text-box h1,
 .evaluation-text-box h1,
-.awards-text-box h1 {
-  font-size: 20px; /* Diminuído */
-  margin-bottom: 15px; /* Diminuído */
+.awards-text-box h1,
+.bracket-text-box h1,
+.game-text-box h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: sticky !important; /* Mantém o título fixo no topo ao rolar */
+  top: 0;
+  z-index: 10;
+  padding: 10px 0; /* Adiciona um espaçamento ao título */
+  align-items: center;
 }
 
 .rules-text-box p,
 .evaluation-text-box p,
-.awards-text-box p {
-  font-size: 14px; /* Diminuído */
-  margin-bottom: 8px; /* Diminuído */
+.awards-text-box p,
+.bracket-text-box p,
+.game-text-box p {
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .rules-text-box button,
 .evaluation-text-box button,
-.awards-text-box button {
+.awards-text-box button,
+.bracket-text-box button,
+.game-text-box button{
   display: block;
-  margin: 15px auto 0; /* Diminuído */
-  padding: 8px 16px; /* Diminuído */
+  margin: 15px auto 0;
+  padding: 8px 16px;
   border: none;
   background: rgba(255, 255, 255, 0.4);
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 12px; /* Diminuído */
+  font-size: 12px;
   transition: background 0.3s ease;
 }
 
+
 .rules-text-box button:hover,
 .evaluation-text-box button:hover,
-.awards-text-box button:hover {
+.awards-text-box button:hover,
+.bracket-text-box button:hover
+.game-text-box button:hover {
   background: rgba(255, 255, 255, 0.6);
 }
+
+/*SCROLL BAR*/
+/* Estilo para o scrollbar */
+.rules-text-box::-webkit-scrollbar,
+.game-text-box::-webkit-scrollbar  {
+  width: 12px; /* Largura do scrollbar */
+}
+
+.rules-text-box::-webkit-scrollbar-track,
+.game-text-box::-webkit-scrollbar-track {
+  background: rgba(58, 3, 40, 0.6); /* Cor de fundo do track (área de rolagem) */
+  border-radius: 10px;
+}
+
+.rules-text-box::-webkit-scrollbar-thumb,
+.game-text-box::-webkit-scrollbar-thumb  {
+  background: rgba(58, 3, 40, 0.6); /* Cor do polegar (parte que é arrastada) */
+  border-radius: 10px;
+  border: 3px solid rgba(58, 3, 40, 0.6); /* Borda ao redor do polegar */
+}
+
+.rules-text-box::-webkit-scrollbar-thumb:hover,
+.game-text-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(58, 3, 40, 0.6); /* Cor ao passar o mouse */
+}
+
+/* Para o Firefox */
+.rules-text-box,
+.game-text-box {
+  scrollbar-width: thin; /* Define a largura do scrollbar */
+  scrollbar-color: rgba(58, 3, 40, 0.6) rgba(0, 0, 0, 0.4); /* Define a cor do polegar e do track */
+}
+
 
 /* MEDIA QUERIES */
 /* Telas menores que 768px */

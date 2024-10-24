@@ -17,7 +17,8 @@
 <body>
   <div class="header">
     <div class="logo">
-      <img src="img/favi.png" alt="Logo" class="logo-image"> <!-- Adicionei uma classe para estilização -->
+      <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-image" href="index.html">
+      </a>
     </div>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -28,6 +29,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showGame()">Sobre o Game</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#" onclick="showRules()">Regras</a>
             </li>
             <li class="nav-item">
@@ -35,6 +39,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" onclick="showAwards()">Premiação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showBracket()">Bracket</a>
             </li>
 
           </ul>
@@ -47,17 +54,37 @@
   <div class="hero">
     <div class="highway"></div>
     <div class="city"></div>
-    <img
+    <img class="run-img"
       src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Q2cHgwYmR5ZWRjcWt6eWl6bGJ6MjNxb2hjZWs1bWo4enpqY3ZubyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/0yhNPJuZu2wZPigcqM/giphy.webp"
       alt="Running Animation">
 
     <div class="text-box">
-      <h4 class="hero-subtitle">1ª Maratona</h4>
+      <h5 class="hero-subtitle">1ª Maratona</h5>
       <h1 class="hero-title">ONE PAGERS KINGS</h1>
-      <h3 class="hero-subtitle">Forme uma equipe, produza OPs de qualidade e dispute prêmios!</h3>
+      <h4 class="hero-subtitle">Forme uma equipe, produza OPs de qualidade e dispute prêmios!</h4>
+    </div>
 
-      <div class="row">
-        <a href="">Inscreva-se</a>
+    <!-- Game -->
+    <div class="game-section" style="display: none;">
+      <div class="game-text-box">
+        <h1>A Maratona One Pager Kings</h1>
+        <p>A Maratona OPK tem como objetivo incentivar a criação de OPs de alta qualidade, promovendo inovação,
+          colaboração e reconhecimento dentro da empresa.</p>
+        <h6>Competição em Estilo Mata-Mata:</h6>
+        </p>
+        <p>Cada grande conta vai eleger o melhor One Pager entre seus projetos.
+          Os OPs vencedores de cada conta avançam para uma fase final, onde competirão entre si.</p>
+
+        <h6>Datas de Divulgação:</h6>
+        <p>O resultado da segunda metade de 2024 será divulgado em janeiro de 2025.
+          O resultado do primeiro semestre de 2025 sairá em julho de 2025.</p>
+
+        <h6>Finalistas e Apresentações:</h6>
+        <p>A Liderança e ComEx terão a responsabilidade de julgar os OPs, garantindo imparcialidade e excelência na
+          avaliação.</p>
+        <p>Os finalistas terão a oportunidade de apresentar seus OPs no próximo GTG (Get Together).
+          A grande premiação será realizada na edição de dezembro.</p>
+        <button onclick="showHome()">Voltar</button>
       </div>
     </div>
 
@@ -74,6 +101,7 @@
         <button onclick="showHome()">Voltar</button>
       </div>
     </div>
+
 
     <!-- Avaliação -->
     <div class="evaluation-criteria-section" style="display: none;">
@@ -95,7 +123,6 @@
       </div>
     </div>
 
-
     <!-- Premiação -->
     <div class="awards-section" style="display: none;">
       <div class="awards-text-box">
@@ -104,7 +131,16 @@
           membro
           da equipe vencedora escolhe onde usar seu gift card.</p>
         <button class="btn-voltar" onclick="showHome()">Voltar</button>
+      </div>
+    </div>
 
+    <!-- Bracket -->
+    <div class="bracket-section" style="display: none;">
+      <div class="bracket-text-box">
+        <h1>Sessão de Chaves</h1>
+        <p>⚙️🔧 Em construção 🔧⚙️</p>
+        <p></p>
+        <button class="btn-voltar" onclick="showHome()">Voltar</button>
       </div>
     </div>
 
