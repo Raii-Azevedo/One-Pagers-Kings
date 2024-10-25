@@ -1,3 +1,17 @@
+// Seleciona todos os links de navegação
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    // Encontra o elemento do menu colapsado
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    // Verifica se o menu está aberto e o fecha
+    if (navbarCollapse.classList.contains('show')) {
+      const collapse = new bootstrap.Collapse(navbarCollapse);
+      collapse.hide();
+    }
+  });
+});
+
+
 function showHome() {
     const sections = document.querySelectorAll('.rules-section, .evaluation-criteria-section, .awards-section, .bracket-section, .game-section');
     const heroTextBox = document.querySelector('.hero .text-box');
