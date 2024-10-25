@@ -245,6 +245,7 @@ img {
 .game-text-box p {
   font-size: 14px;
   margin-bottom: 8px;
+  align-items: justify;
 }
 
 .rules-text-box button,
