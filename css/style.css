@@ -326,7 +326,7 @@ body {
 }
 
 /* Equipes que avançam */
-.team.yellow {
+.team.purple {
   background-color: #8b779a; /* Equipes que avançam */
 }
 
@@ -529,8 +529,8 @@ body {
     animation: highway 8s linear infinite; /* Animação suavizada para telas menores */
   }
   .city {
-    height: 28vh; /* Ajuste para um melhor equilíbrio visual */
-    bottom: 8vh; /* Mantém a cidade alinhada com a estrada */
+    height: 50vh; /* Ajuste para um melhor equilíbrio visual */
+    bottom: 7vh; /* Mantém a cidade alinhada com a estrada */
     width: 700%; /* Ajustado para acompanhar a largura da highway */
     animation: city 12s linear infinite; /* Animação mais lenta */
   }
