@@ -505,8 +505,8 @@ body {
   }
   .city {
     height: 50vh; /* Aumentado para dar mais presença visual */
-    bottom: 9vh; /* Mantém a cidade logo acima da pista */
-    width: 600%; /* Ajustado para acompanhar a largura da highway */
+    bottom: 15vh; /* Mantém a cidade logo acima da pista */
+    width: 1000%; /* Ajustado para acompanhar a largura da highway */
     animation: city 12s linear infinite; /* Suavização na animação */
     background-repeat: no-repeat;
   }
@@ -533,7 +533,7 @@ body {
   .city {
     height: 50vh; /* Ajuste para um melhor equilíbrio visual */
     bottom: 20vh; /* Mantém a cidade alinhada com a estrada */
-    width: 1000%; /* Ajustado para acompanhar a largura da highway */
+    width: 1500%; /* Ajustado para acompanhar a largura da highway */
     animation: city 12s linear infinite; /* Animação mais lenta */
   }
   img {
