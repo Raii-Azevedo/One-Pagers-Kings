@@ -508,6 +508,7 @@ body {
     bottom: 9vh; /* Mantém a cidade logo acima da pista */
     width: 600%; /* Ajustado para acompanhar a largura da highway */
     animation: city 12s linear infinite; /* Suavização na animação */
+    background-repeat: no-repeat;
   }
   img {
     height: 20%; /* Diminuído para ocupar menos espaço na tela */
