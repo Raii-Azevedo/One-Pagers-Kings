@@ -437,6 +437,7 @@ body {
     bottom: 14vh; /* Alinhado logo acima da pista */
     width: 500%; /* Ajustado para seguir o mesmo padrão da highway */
     animation: city 15s linear infinite; /* Velocidade ajustada */
+    background-repeat: no-repeat;
   }
   img {
     height: 25%; /* Diminuído */
