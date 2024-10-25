@@ -6,7 +6,7 @@
 }
 html, body {
   overflow-x: hidden; /* Impede a rolagem horizontal */
-  max-width: 100%; /* Garante que a largura nunca ultrapasse 100% */
+  max-width: 100% !important;  /* Garante que a largura nunca ultrapasse 100% */
 }
 
 body {
@@ -98,7 +98,7 @@ ul li a:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 .text-box h1, .text-box h3, .text-box a {
