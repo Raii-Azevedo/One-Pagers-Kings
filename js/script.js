@@ -50,9 +50,8 @@ function showHome() {
     const sections = document.querySelectorAll('.rules-section, .evaluation-criteria-section, .awards-section, .bracket-section');
     const heroTextBox = document.querySelector('.hero .text-box');
     const gameSection = document.querySelector('.game-section');
-  
+
     if (heroTextBox) heroTextBox.style.display = 'none'; // Esconde o texto do Hero
     sections.forEach(section => section.style.display = 'none'); // Esconde outras seções
     if (gameSection) gameSection.style.display = 'block'; // Certifica-se de mostrar a seção de game
-  }
-  
+}

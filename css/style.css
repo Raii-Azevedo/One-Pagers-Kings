@@ -210,7 +210,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Permite que a caixa em si role */
-  z-index: 5;
+  z-index: 999;
 }
 
 .rules-text-box,
@@ -273,6 +273,117 @@ img {
 .game-text-box button:hover {
   background: rgba(255, 255, 255, 0.6);
 }
+
+/*Braket Ranking*/
+/* Estilo geral do body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #222; /* Mantém o fundo escuro para a página geral */
+  color: #fff;
+}
+
+/* Estilo da seção do Bracket */
+.bracket-section {
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  display: none; /* Inicialmente oculto */
+}
+
+.bracket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+/* Estilo das rodadas (rounds) */
+.round {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Equipes - estilo das equipes da primeira rodada */
+.team {
+  width: 150px;
+  height: 40px;
+  background-color: #aa68d9; /* Roxo claro para as equipes da primeira rodada */
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  margin: 10px 0;
+  color: white;
+  font-weight: bold;
+}
+
+/* Equipes que avançam */
+.team.yellow {
+  background-color: #8b779a; /* Equipes que avançam */
+}
+
+/* Linhas conectando os times */
+.line {
+  width: 2px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 40px;
+}
+
+/* Finalistas */
+.final .team {
+  background-color: #f0d35f;
+}
+
+/* Centralizando a Taça */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.trophy {
+  font-size: 50px;
+  color: gold; /* Cor da taça dourada */
+  margin-bottom: 10px;
+}
+
+/* Estilo do campeão */
+.champion {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fff;
+  white-space: nowrap; /* Força o texto a ficar em uma única linha */
+  text-align: center; /* Garante que o texto fique centralizado */
+}
+
+
+@media (max-width: 768px) {
+  .team {
+      width: 120px;
+      height: 35px;
+      font-size: 12px;
+  }
+
+  .champion {
+      font-size: 16px;
+  }
+}
+
+
 
 /*SCROLL BAR*/
 /* Estilo para o scrollbar */
