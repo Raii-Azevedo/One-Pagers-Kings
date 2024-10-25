@@ -532,8 +532,8 @@ body {
   }
   .city {
     height: 50vh; /* Ajuste para um melhor equilíbrio visual */
-    bottom: 10vh; /* Mantém a cidade alinhada com a estrada */
-    width: 700%; /* Ajustado para acompanhar a largura da highway */
+    bottom: 20vh; /* Mantém a cidade alinhada com a estrada */
+    width: 1000%; /* Ajustado para acompanhar a largura da highway */
     animation: city 12s linear infinite; /* Animação mais lenta */
   }
   img {
