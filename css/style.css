@@ -440,8 +440,13 @@ body {
     background-repeat: no-repeat;
   }
   img {
-    height: 25%; /* Diminuído */
+    height: 50%; /* Diminuído */
   }
+
+  .run-img{
+    height: 25%;
+  }
+
   ul {
     flex-direction: column;
     background-image: linear-gradient(rgba(58, 3, 40, 0.6), rgba(0, 0, 0, 0.3));
@@ -511,7 +516,7 @@ body {
     background-repeat: no-repeat;
   }
   img {
-    height: 20%; /* Diminuído para ocupar menos espaço na tela */
+    height: 50%; /* Diminuído para ocupar menos espaço na tela */
   }
 }
 /* Telas menores que 375px */
@@ -537,7 +542,7 @@ body {
     animation: city 12s linear infinite; /* Animação mais lenta */
   }
   img {
-    height: 18%; /* Diminuído para manter o foco no conteúdo */
+    height: 50%; /* Diminuído para manter o foco no conteúdo */
   }
   .navbar-nav li {
     margin: 4px 0; /* Ajusta o espaçamento entre os itens do menu */

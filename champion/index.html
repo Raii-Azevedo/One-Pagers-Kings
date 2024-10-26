@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Labirinto</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .game-area {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: #eee;
+      border: 2px solid #333;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .player {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #007bff;
+      top: 10px;
+      left: 10px;
+    }
+    .goal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #28a745;
+      bottom: 10px;
+      right: 10px;
+    }
+    .wall {
+      position: absolute;
+      background-color: #333;
+    }
+    .podium {
+      display: none;
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #333;
+      text-align: center;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Jogo Labirinto</h1>
+  <div class="game-area" id="game-area">
+    <div class="player" id="player"></div>
+    <div class="goal" id="goal"></div>
+    <!-- Labirinto (paredes) -->
+    <div class="wall" style="top: 50px; left: 50px; width: 100px; height: 20px;"></div>
+    <div class="wall" style="top: 150px; left: 100px; width: 20px; height: 100px;"></div>
+    <div class="wall" style="top: 300px; left: 200px; width: 150px; height: 20px;"></div>
+    <div class="wall" style="top: 200px; left: 250px; width: 20px; height: 100px;"></div>
+  </div>
+  <div class="podium" id="podium">🏆 Campeão! 🏆</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
