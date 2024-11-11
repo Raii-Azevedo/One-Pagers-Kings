@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 #root {
+  /* --bs-primary: #002244;
+  --bs-secondary: #FF0066;
+  --bs-tertiary: #66cccc; */
   --blue: #002244;
   --dark-blue: #0A1128;
   --pink: #FF0066;
@@ -20,5 +23,21 @@
   min-height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
+.hero-text{  
+  color: white;
+  height: 100%;
+  display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+}
+
+.regras1, .premios {
+  color: white;
+  /* background-color: var(--blue); */
+}
