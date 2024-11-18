@@ -65,3 +65,55 @@ section img {
   height: auto;
   margin: 20px 0; /* Espaçamento ao redor da imagem */
 }
+
+
+/* Estilos gerais */
+.bg-dark {
+  background-color: #343a40;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+
+.imagem-centralizada img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+.equipe {
+  text-align: left;
+  width: 100%;
+}
+
+
+.foto {
+  text-align: right;
+  width: 100%;
+}
+
+
+.ultimo-paragrafo {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
