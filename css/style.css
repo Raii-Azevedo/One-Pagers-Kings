@@ -17,6 +17,12 @@
   box-sizing: border-box;
 }
 
+.navbar .nav-link:hover {
+  color: rgb(255,0,102,0.7);
+  transition: color 0.3s ease-in-out; 
+}
+
+
 .hero {
   background-image: linear-gradient(rgb(0,34,68,0.3), rgb(255,0,102,0.7)), url("../img/fundo-one-pagers-kings-artefact.jpg");
   max-width: 100vw;
@@ -40,4 +46,22 @@ align-items: flex-start;
 .regras1, .premios {
   color: white;
   /* background-color: var(--blue); */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0; /* Espaçamento ao redor da imagem */
 }
