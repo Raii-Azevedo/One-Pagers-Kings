@@ -117,3 +117,96 @@ section img {
   width: 100%;
   margin-top: 1rem;
 }
+
+
+/*Squads*/
+
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Estilos dos cards */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exatamente 5 colunas */
+  gap: 16px;
+  padding: 16px;
+}
+
+
+/* Estilos dos cards */
+.squad-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-left: 8px solid;
+}
+
+.squad-card h2 {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.squad-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.squad-card ul li {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+/* Cores dos squads */
+.A {
+  border-color: #3675d3;
+}
+
+.B {
+  border-color: #8b8d8f;
+}
+
+.C {
+  border-color: #26e099;
+}
+
+.D {
+  border-color: #fd3838;
+}
+
+.E {
+  border-color: #1bf81b;
+}
+
+.F {
+  border-color: #c51441;
+}
+
+.G {
+  border-color: #9931b3;
+}
+
+.H {
+  border-color: #fcda6d;
+}
+
+.I {
+  border-color: #9db3cc;
+}
+
+.J {
+  border-color: #100cff;
+}
